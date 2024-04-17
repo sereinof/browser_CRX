@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "My Extension",
+    "version": "1.0",
+    "permissions": ["activeTab", "storage", "https://*/*", "http://*/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://articles.zsxq.com/**"],
+        "js": ["contentScript.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  }
